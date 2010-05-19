@@ -1,3 +1,5 @@
+import yaml
+
 import nltk
 import nltk.tag
 import nltk.tokenize
@@ -8,7 +10,7 @@ TRAIN_DATA = [
     [('add', 'ACTION_ADD'), ('meeting', 'DATE_TYPE')],
     ]
 
-brown_train = nltk.corpus.brown.tagged_sents()
+brown_train = nltk.corpus.brown.tagged_sents()[:5000]
 
 re_patterns = [('..:..', 'TIME')]
 re_tagger = nltk.tag.RegexpTagger(re_patterns)
